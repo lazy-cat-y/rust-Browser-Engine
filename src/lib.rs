@@ -1,3 +1,4 @@
 pub mod dom;
-mod html_parse;
+pub mod html_parse;
 pub mod css;
+pub mod css_parse;
