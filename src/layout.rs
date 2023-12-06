@@ -154,7 +154,7 @@ impl<'a> LayoutBox<'a> {
         let underflow = b_box.content.width - total;
 
         match (width, margin_l, margin_r) {
-            (0.0, _, _) => {
+            (w, _, _) if w == 0.0 => {
                 if underflow >= 0.0 {
                     dimensions.content.width = underflow;
                     dimensions.margin.right = margin_r_num;
