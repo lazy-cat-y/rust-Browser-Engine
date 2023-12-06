@@ -23,7 +23,7 @@ pub enum Display {
 impl<'a> StyledNode<'a> {
     pub fn new(node: &'a Node, stylesheet: &'a Stylesheet) -> StyledNode<'a> {
         let mut style_children = Vec::new();
-
+        
         for child in &node.children {
             match child.node_type {
                 NodeType::Element(_) => style_children.push(StyledNode::new(&child, stylesheet)),

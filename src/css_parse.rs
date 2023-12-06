@@ -50,8 +50,8 @@ impl<'a> CssParser<'a> {
     }
 
     fn parse_selector(&mut self) -> Selector {
-        let sselector = SimpleSelector::default();
-        let selector = Selector::default();
+        let mut sselector = SimpleSelector::default();
+        let mut selector = Selector::default();
 
         self.consume_while(char::is_whitespace);
 
